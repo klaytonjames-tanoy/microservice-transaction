@@ -2,8 +2,8 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: ./mvnw clean install
-  - command: ./mvnw spring-boot:run
+  - init: mvn clean install
+  - command: mvn spring-boot:run
 
 ports:
   - port: 8080
