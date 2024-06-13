@@ -11,7 +11,10 @@ ports:
     onOpen: open-preview
 
 
-
+vscode:
+  extensions:
+    - vscjava.vscode-java-pack
+    - pivotal.vscode-spring-boot
 # Optional: prebuild to speed up the start time
 # github:
 #   prebuilds:
