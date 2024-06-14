@@ -4,12 +4,7 @@ image:
 tasks:
   - name: Docker Compose 
     init: docker-compose up -d
-    command: |
-      # Optionally wait for the services to be ready
-      while ! nc -z localhost 3306; do
-        echo "Waiting for database connection..."
-        sleep 2
-      done
+    command: echo "Database initialize"
   - name: Maven clean install
     init: mvn clean install
     command: mvn spring-boot:run
