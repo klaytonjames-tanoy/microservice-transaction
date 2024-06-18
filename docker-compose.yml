@@ -10,3 +10,7 @@ services:
       MYSQL_PASSWORD: password
     ports:
       - "3306:3306"
+  service-api:
+    image: yosukelight/service-api
+    ports:
+      - "9090:8080"
