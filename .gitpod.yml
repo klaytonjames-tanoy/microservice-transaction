@@ -11,7 +11,7 @@ tasks:
       done
       echo "Database is up and running"
   - name: Maven clean install
-    init: mvn clean install
+    init: mvn clean install -DskipTests
     command: mvn spring-boot:run
 
 
