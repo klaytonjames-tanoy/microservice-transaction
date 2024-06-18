@@ -4,7 +4,12 @@ image:
 tasks:
   - name: Docker Compose 
     init: docker-compose up -d
-    command: echo "Database initialize"
+    command: |
+      echo "Waiting for the database connection..."
+      while ! nc -z localhost 3306; do
+        sleep 2
+      done
+      echo "Database is up and running"
   - name: Maven clean install
     init: mvn clean install
     command: mvn spring-boot:run
